@@ -18,6 +18,5 @@ test_feature_mean_std <- (test_feature_vector[,grep("mean()|std", feature_labels
 test_data <- cbind(test_subject_id, test_activity_labels$activity.label, test_feature_mean_std)
 colnames(test_data) <- c("Subject ID", "Activity Label", grep("mean|std", feature_labels$feature.label, value=TRUE))
 
-total_data <- rbind(train_data, test_data)
-
-total_data
+tidy_data <- rbind(train_data, test_data)
+tidy_data
